@@ -1,3 +1,6 @@
+<?php
+include('header.php');
+?>
 <section class="u-clearfix u-section-2" id="sec-7dcb">
     <div class="u-clearfix u-sheet u-sheet-1"></div>
   </section>
@@ -28,3 +31,7 @@
   <section class="u-clearfix u-section-4" id="carousel_d852">
     <div class="u-clearfix u-sheet u-sheet-1"></div>
   </section>
+
+  <?php
+  include('footer.php')
+  ?>
