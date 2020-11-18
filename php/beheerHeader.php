@@ -7,6 +7,7 @@
 
 //   Sluit verbinding met database
   $conn->close();
+
 ?>
 
 <!doctype html>
@@ -40,7 +41,7 @@
     </div>
 
     <div class="header_uitloggen">
-    
+         <a href="logout.php" > <button> Uitloggen </button></a>
     </div>
 
 
