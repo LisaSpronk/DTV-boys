@@ -3,8 +3,7 @@
     session_start();
     include('database.php');
     $user = $_SESSION['user'];
-    
-    
+
 
 //   Sluit verbinding met database
   $conn->close();
@@ -27,22 +26,22 @@
 
 <div id="beheer_header_container">
 
-<div class="header_logo">
-    <img src="images/default-logo.png" alt="logo Doetinchemse Tennis Vereniging">
-</div>
+    <div class="header_logo">
+        <img src="images/default-logo.png" alt="logo Doetinchemse Tennis Vereniging">
+    </div>
 
-<div class="header_gebruiker">
+    <div class="header_gebruiker">
 
         <img src="images/profielfoto/<?php echo $_SESSION['user']->getProfielfoto();?>">
         <span> Welkom <span>
         <br>
         <span> <?php echo $_SESSION['user']->getUsername();?> <span>
 
-</div>
+    </div>
 
-<div class="header_uitloggen">
+    <div class="header_uitloggen">
     
-</div>
+    </div>
 
 
 
@@ -52,5 +51,4 @@
 
 
 
-</body>
-</html> 
+
