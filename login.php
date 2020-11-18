@@ -31,11 +31,11 @@ function login($email, $wachtwoord){
     //Onderneem actie op basis van resultaat
     if ($result == null) {
         echo "<script>alert('Incorrecte gegevens!');</script>";
-        //echo "<script>window.location.href = 'http://ldiks.gc-webhosting.nl/security/pwa/index.php' </script>";
+        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.html' </script>";
     } else {
         echo "<script>alert('Succes!');</script>";
 
-        //echo "<script>window.location.href = 'http://ldiks.gc-webhosting.nl/security/pwa/homepage.php' </script>";
+        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/index.html' </script>";
     }
 }
 

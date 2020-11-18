@@ -1,3 +1,70 @@
-.u-section-1 .u-sheet-1 {
-  min-height: 500px;
+
+.registreren-pagina {
+  padding: 0 50px;
+  margin: 50px 0;
 }
+
+.u-form-group input:focus{
+  outline: none;
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+  border-bottom: 3px solid #7da87b;
+}
+
+.u-form-group input:focus:invalid{
+  border-bottom: 3px solid red;
+}
+
+.form-naam {
+  display: flex;
+}
+
+.form-voornaam, .form-achternaam {
+  width: 40%;
+}
+
+.form-tussenvoegsel {
+  width: 20%;
+  margin: 0 10px;
+}
+
+.form-adres {
+  display: flex;
+}
+
+.form-straat, .form-woonplaats {
+  width: 40%;
+}
+
+.form-huisnr {
+  width: 20%;
+  margin: 0 10px;
+}
+
+.form-geslacht {
+  display: flex;
+  align-items: center;
+}
+
+.form-geslacht input {
+  margin-right: 5px;
+}
+
+.form-geslacht label {
+  margin-right: 15px;
+}
+
+input[type=submit] {
+  padding: 10px 20px;
+  background-color: #7da87b;
+  color: white;
+  margin: 20px 0 0 10px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+  outline: none;
+  background-color: rgba(125, 168, 123, 0.8);
+}
+
