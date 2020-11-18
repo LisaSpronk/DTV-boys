@@ -28,18 +28,20 @@
 <div id="beheer_header_container">
 
 <div class="header_logo">
-    <img src="images/logo.png" alt="logo Doetinchemse Tennis Vereniging">
+    <img src="images/default-logo.png" alt="logo Doetinchemse Tennis Vereniging">
 </div>
 
 <div class="header_gebruiker">
 
         <img src="images/profielfoto/<?php echo $_SESSION['user']->getProfielfoto();?>">
         <span> Welkom <span>
+        <br>
         <span> <?php echo $_SESSION['user']->getUsername();?> <span>
 
 </div>
 
 <div class="header_uitloggen">
+    
 </div>
 
 
