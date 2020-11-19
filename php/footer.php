@@ -22,16 +22,5 @@
         </p>
         <a href="Registreren.html" data-page-id="236883568" class="u-btn u-button-style u-none u-text-active-custom-color-1 u-text-hover-custom-color-1 u-text-white u-btn-2">Registreren</a>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
   </body>
 </html>
