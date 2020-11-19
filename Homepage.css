@@ -2,6 +2,16 @@
   min-height: 100vh;
 }
 
+.u-logo-image-1 {
+  max-width: none !important;
+  max-height: none !important;
+  width: 90px;
+}
+
+.u-text-body-color, a.u-button-style.u-text-body-color {
+  color: white !important;
+}
+
 .u-section-1 .u-custom-html-1 {
   width: 570px;
   min-height: 228px;

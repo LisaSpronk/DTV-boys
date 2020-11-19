@@ -1,3 +1,61 @@
-.u-section-1 .u-sheet-1 {
-  min-height: 458px;
+.inloggen-pagina {
+  padding: 0 50px;
+  margin: 50px 0;
+}
+
+.inloggen {
+  display: flex;
+  justify-content: center;
+}
+
+.inloggen:last-child {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.login-leden, .login-personeel {
+  width: 40%;
+}
+
+.login-leden {
+  border-right: solid 1px black;
+}
+
+.login-personeel {
+  margin-left: 10%;
+}
+
+.inloggen input {
+  font-size: 18px;
+  color: gray;
+  padding: 10px 15px;
+  background-color:white;
+  border-bottom: solid 1px gray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 70%;
+  display: block;
+  transition: all .3;
+  margin-bottom: 20px;
+}
+
+.inloggen input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+  border-bottom: 3px solid #7da87b;
+}
+
+.inloggen input:focus:invalid {
+  border-bottom: 3px solid red;
+}
+
+.inloggen .btn-primary {
+  background-color: #7da87b;
+  color: white;
+}
+
+.inloggen .btn-primary:hover {
+  background-color: rgba(125, 168, 123, 0.8);
 }
