@@ -4,13 +4,13 @@
     $sql1 = 'SELECT * FROM menu WHERE Menu_id="'.$id.'"';
     $result = $conn->query($sql1);
     $row = $result->fetch_assoc();
-    
-    if(isset($_POST['submit'])){
+    if(isset($_POST['save'])){
         $sql = ' UPDATE menu SET Menu_naam = "'.$_POST['naam'].'", Menu_prijs = "'.$_POST['prijs'].'", Menu_categorie = "'.$_POST['categorie'].'" WHERE Menu_id = "'.$id.'"';
         $conn->query($sql);
+        $conn->close();
+        echo"<script> window.location.href = 'http://localhost/DTV/Menu/menuAdmin.php'; </script>";
         
     }
-    echo $id;
 ?>
 <html lang="en">
 <head>
@@ -19,8 +19,8 @@
     <title>Document</title>
 </head>
 <body>
-<form action="menuChange.php" method="POST">
-    <input type="text" name="naam" value ='<?php echo$row['Menu_naam'];?>'>
+<form  method="POST">
+    <input type="text" name="naam" value ="<?php echo$row['Menu_naam'];?>">
     <input type="number" name="prijs" value="<?php echo$row['Menu_prijs'];?>" step="0.01" min="0,05" max="20">
     <?php 
     if($row['Menu_categorie']=="snacks"){
@@ -39,7 +39,7 @@
         <?php
     } ?>
 
-    <input type="submit" name="submit" value="submit">
+    <input type="submit" name="save" value="submit">
     
 </form>
 </body>

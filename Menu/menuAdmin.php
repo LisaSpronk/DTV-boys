@@ -21,18 +21,18 @@
             while($row = $result->fetch_assoc()) {  ?> 
             <li><?php echo $row['Menu_naam']?>
             € <?php  echo $row['Menu_prijs']?>
-            <a href="menuChange.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></li>
+            <a href="menuChange.php?id=<?php echo$row['Menu_id']?>">Bewerken</a><a href="menuDelete.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></li>
     <?php  }}?>
          
     </ul>
          <h3>Drinken</h3>
-    <ul>
+        <ul>
     <?php if ($result2->num_rows > 0) {
             while($row = $result2->fetch_assoc()) {  ?> 
             <li><?php echo $row['Menu_naam']?>
             € <?php  echo $row['Menu_prijs']?>
-            <a href="menuChange.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></li>
-    <?php  }}?>
+            <a href="menuChange.php?id=<?php echo$row['Menu_id']?>">Bewerken</a><a href="menuDelete.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></li>
+    <?php  }}?>  
     </ul>
 </body>
 </html>
