@@ -1,3 +1,8 @@
+<?php 
+      include("php/lid.php");
+      session_start();
+?>
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -66,7 +71,12 @@
         <a href="Registreren.html" data-page-id="236883568" class="u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2">Registreren</a>
       </div></header> 
     
+
     
+    <div>
+      <p><?php echo $_SESSION['gebruiker']->getVoornaam(); ?></p>
+
+    </div>
     <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-57e3"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1">
           <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">

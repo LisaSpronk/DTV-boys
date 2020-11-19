@@ -29,6 +29,14 @@
         function getVoornaam() {
             return $this->Lid_voornaam;
         }
+
+        function setWachtwoord($Lid_wachtwoord) {
+            $this->Lid_wachtwoord = $Lid_wachtwoord;
+        }
+    
+        function getWachtwoord() {
+            return $this->lid_wachtwoord;
+        }
     
         function setTussenvoegsel($Lid_tussenvoegsel) {
             $this->Lid_tussenvoegsel = $Lid_tussenvoegsel;
