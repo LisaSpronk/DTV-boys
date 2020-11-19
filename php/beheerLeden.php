@@ -3,6 +3,7 @@ include("beheerHeader.php");
 include("beheerNav.php");
 include("database.php");
 
+
 $ledenQuery = "SELECT * FROM Leden";
 $stmt = $conn->prepare($ledenQuery);
 $stmt->execute();
