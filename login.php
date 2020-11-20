@@ -1,10 +1,7 @@
 <?php
 
-session_start();
-
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    login($_POST["email"], $_POST["wachtwoord"]);
+    login($_POST["email"], $_POST["wachtwoord"]); 
 }
 
 
@@ -34,9 +31,9 @@ function login($email, $wachtwoord){
         echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.html' </script>";
     } else {
         echo "<script>alert('Succes!');</script>";
-
+        session_start();
         include("php/lid.php");
-
+        
         $lid = new Lid();
         $lid->setLidnr($result['Lid_nr']);
         $lid->setVoornaam($result['Lid_voornaam']);
@@ -53,6 +50,7 @@ function login($email, $wachtwoord){
         $lid->setLidsinds($result['Lid_sinds']);
 
         $_SESSION['gebruiker'] = $lid;
+        $_SESSION['loggedin'] = true;
 
 
         //echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/index.html' </script>";

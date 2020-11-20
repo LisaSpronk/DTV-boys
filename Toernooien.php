@@ -1,5 +1,6 @@
 <?php 
       include("php/lid.php");
+      include("login.php");
       session_start();
 ?>
 
@@ -74,7 +75,19 @@
 
     
     <div>
-      <p><?php echo $_SESSION['gebruiker']->getVoornaam(); ?></p>
+      <p>
+        <?php
+        
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+          echo "Welcome to the member's area, " . $_SESSION['gebruiker']->getVoornaam() . "!";
+      } else {
+          echo "Please log in first to see this page.";
+      }
+          
+    
+        ?>
+        
+      </p>
 
     </div>
     <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-57e3"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
