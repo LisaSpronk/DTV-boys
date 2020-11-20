@@ -1,6 +1,6 @@
 <?php
 
-  include("php/header.html");
+  include("php/header-homepage.php");
 
 ?>
 

@@ -8,11 +8,7 @@
     <title>Homepage</title>
 
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
-    <link rel="stylesheet" href="css/Inloggen.css" media="screen">
-    <link rel="stylesheet" href="css/Registreren.css" media="screen">
-    <link rel="stylesheet" href="css/Banen-reserveren.css" media="screen">
-    <link rel="stylesheet" href="css/Toernooien.css" media="screen">
-    <link rel="stylesheet" href="php/header.css" media="screen">
+    <link rel="stylesheet" href="css/Homepage.css" media="screen">
 
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -34,7 +30,7 @@
     <link rel="canonical" href="index.php">
     <meta property="og:url" content="index.php">
   </head> 
-  <body class="u-body u-overlap-transparent">
+  <body class="u-body u-overlap u-overlap-transparent">
       
   <header class="u-align-right u-clearfix u-header u-header" id="sec-f56c"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="#" class="u-image u-logo u-image-1">
