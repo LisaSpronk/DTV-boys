@@ -1,7 +1,7 @@
 <?php
 //Als loginformulier reeds werd verzonden
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    signup($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], hash('sha256', $_POST['wachtwoord']), $_POST["straat"], $_POST["huisnr"], $_POST["woonplaats"], $_POST["telefoonnr"] $_POST["email"]), $_POST["geslacht"], $_POST["geboortedatum"];
+    signup($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], hash('sha256', $_POST['wachtwoord']), $_POST["straat"], $_POST["huisnr"], $_POST["woonplaats"], $_POST["telefoonnr"] $_POST["email"]), $_POST["geslacht"], $_POST["geboortedatum"]);
 }
 
 function signup($voornaam, $password, $profielfoto, $email){
