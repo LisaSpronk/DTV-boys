@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <!-- <link rel="stylesheet" href="header.css" media="screen"> -->
+    <link rel="stylesheet" href="php/header.css" media="screen">
 
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -44,7 +45,7 @@
     <meta property="og:url" content="index.php">
     
   </head> 
-  <body class="u-body u-overlap u-overlap-transparent">
+  <body class="u-body u-overlap-transparent">
       
   <header class="u-align-right u-clearfix u-header u-header" id="sec-f56c"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="#" class="u-image u-logo u-image-1">
