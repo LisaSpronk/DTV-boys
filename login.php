@@ -31,7 +31,8 @@ function login($email, $wachtwoord){
     //Onderneem actie op basis van resultaat
     if ($result == null) {
         echo "<script>alert('Incorrecte gegevens!');</script>";
-        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.html' </script>";
+
+        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
     } else {
         echo "<script>alert('Succes!');</script>";
 
