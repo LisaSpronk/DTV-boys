@@ -1,14 +1,16 @@
 <?php
 
 include('database.php');
-$stmt= $conn->prepare("SELECT * FROM 'menu'");
-
-if($_POST['categorie']=='alles'){
-    $stmt= $conn->prepare('SELECT * FROM menu');
+$title="Drinken";
+$stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie ="drinken"');
+if(isset($_POST['drinken'])){
+    $title="Drinken";
+    $stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie ="drinken"');
     $stmt->execute();
-}else{
-    $stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie =?');
-    $stmt->bind_param("s", $_POST['categorie']);
+} 
+if(isset($_POST['snacks'])){
+    $stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie ="snacks"');
+    $title="Snacks";
     $stmt->execute();
 } 
 $stmt->execute();   
@@ -85,15 +87,11 @@ $stmt->execute();
     <section class="u-clearfix u-section-1" id="sec-a572">
       <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section>
-<form method="POST">
-    <input type="radio" name="categorie" value="snacks">
-        <label for="snack">snacks</label>
-    <input type="radio" name="categorie" value="drinken">
-        <label for="snack">drinken</label>
-    <input type="radio" name="categorie" value="alles" checked>
-        <label for="snack">alles</label>
-        <input type="submit" name="submit">
+    <form method="POST">
+        <input type="submit" name="drinken" value="Drinken">
+        <input type="submit" name="snacks" value="Snacks">
     </form>
+    <h2><?php echo $title;?></h2>
     <table>
        <tr>
            <th>Naam</td>
