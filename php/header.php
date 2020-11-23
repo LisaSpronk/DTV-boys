@@ -12,12 +12,13 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Homepage</title>
 
-    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="php/header.css">
     <link rel="stylesheet" href="css/Inloggen.css" media="screen">
     <link rel="stylesheet" href="css/Registreren.css" media="screen">
     <link rel="stylesheet" href="css/Banen-reserveren.css" media="screen">
     <link rel="stylesheet" href="css/Toernooien.css" media="screen">
-    <link rel="stylesheet" href="php/header.css">
+    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+    
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <!-- <link rel="stylesheet" href="header.css" media="screen"> -->
