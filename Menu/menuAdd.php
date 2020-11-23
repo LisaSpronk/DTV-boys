@@ -1,9 +1,13 @@
 <?php
     include('database.php');
     if(isset($_POST['submit'])){
-    $sql = 'INSERT INTO menu ( Menu_naam, Menu_prijs, Menu_categorie) VALUES ("'.$_POST['naam'].'","'.$_POST['prijs'].'","'.$_POST['categorie'].'");';
-    $conn->query($sql);
-    $conn->close();
+    $stmt= $conn->prepare(' INSERT INTO menu ( Menu_naam, Menu_prijs, Menu_categorie) VALUES ("?,?,?")');
+    $stmt->bind_param("sis", $_POST['naam'], $_POST['prijs'], $_POST['categorie']);
+    $stmt->execute();
+
+    // $sql = 'INSERT INTO menu ( Menu_naam, Menu_prijs, Menu_categorie) VALUES ("'.$_POST['naam'].'","'.$_POST['prijs'].'","'.$_POST['categorie'].'");';
+    // $conn->query($sql);
+    // $conn->close();
     echo"<script> window.location.href = 'http://localhost/DTV/Menu/menuAdmin.php'; </script>";
     }
     //Sluit verbinding met database

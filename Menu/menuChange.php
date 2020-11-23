@@ -4,9 +4,13 @@
     $sql1 = 'SELECT * FROM menu WHERE Menu_id="'.$id.'"';
     $result = $conn->query($sql1);
     $row = $result->fetch_assoc();
+
+
+
     if(isset($_POST['save'])){
-        $sql = ' UPDATE menu SET Menu_naam = "'.$_POST['naam'].'", Menu_prijs = "'.$_POST['prijs'].'", Menu_categorie = "'.$_POST['categorie'].'" WHERE Menu_id = "'.$id.'"';
-        $conn->query($sql);
+        $stmt= $conn->prepare(' UPDATE menu SET Menu_naam = ? , Menu_prijs = ?, Menu_categorie = ? WHERE Menu_id = "'.$id.'"');
+        $stmt->bind_param("sss", $_POST['naam'], $_POST['prijs'], $_POST['categorie']);
+        $stmt->execute();
         $conn->close();
         echo"<script> window.location.href = 'http://localhost/DTV/Menu/menuAdmin.php'; </script>";
         

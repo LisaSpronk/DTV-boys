@@ -2,13 +2,17 @@
 
     include('database.php');
     if($_POST['categorie']=='alles'){
-        $sql = "SELECT * FROM menu";
+        $stmt= $conn->prepare(' SELECT * FROM menu');
+        $stmt->execute();
     }else{
-        $sql = "SELECT * FROM menu WHERE Menu_categorie ='{$_POST['categorie']}'";
+        $stmt= $conn->prepare(' SELECT * FROM menu WHERE Menu_categorie =?');
+        $stmt->bind_param("s", $_POST['categorie']);
+        $stmt->execute();
+        
     }
     
     //Sluit verbinding met database
-    $result = $conn->query($sql);
+   
 ?>
 
 <html lang="en">
@@ -23,7 +27,7 @@
         <label for="snack">snacks</label>
     <input type="radio" name="categorie" value="drinken">
         <label for="snack">drinken</label>
-    <input type="radio" name="categorie" value="alles">
+    <input type="radio" name="categorie" value="alles" checked>
         <label for="snack">alles</label>
     <input type="submit" name="submit">
     <a href="menuAdd.php"><button>aanmaken</button></a>
@@ -38,8 +42,9 @@
            <td>Bewerken</td>
            <td>Verwijderen</td>
        </tr>
-    <?php if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {  ?> 
+    <?php 
+            $result = $stmt->get_result();
+            while ($row = $result->fetch_assoc()) { ?> 
             <tr>
             <td><?php echo $row['Menu_id']?></td>
             <td><?php echo $row['Menu_naam']?></td>
@@ -48,7 +53,7 @@
             <td><a href="menuChange.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></td>
             <td><a href="menuDelete.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></td>
             </tr>         
-    <?php  }}?>
+    <?php  }?>
     </table>
 </body>
 </html>
