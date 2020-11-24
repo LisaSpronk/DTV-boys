@@ -1,6 +1,6 @@
 <?php 
 
-    $host = 'localhost';
+    $host = '185.87.187.247';
     $dbuser = 'lspronk_dtv';
     $dbpass = 'FransjeB12';
     $dbname = 'lspronk_DTV';
