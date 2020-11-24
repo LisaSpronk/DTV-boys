@@ -85,13 +85,14 @@ $stmt->execute();
         <a href="Registreren.html" data-page-id="236883568" class="u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2">Registreren</a>
       </div></header>
     <section class="u-clearfix u-section-1" id="sec-a572">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
-    </section>
-    <form method="POST">
-        <input type="submit" name="drinken" value="Drinken">
-        <input type="submit" name="snacks" value="Snacks">
+      <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="content">
+     <div class="left">
+     <form method="POST">
+        <input type="submit" class="button1" name="drinken" value="Drinken">
+        <input type="submit" class="button1" name="snacks" value="Snacks">
     </form>
-    <h2><?php echo $title;?></h2>
+    <h1><?php echo $title;?></h1>
     <table>
        <tr>
            <th>Naam</td>
@@ -106,6 +107,15 @@ $stmt->execute();
             </tr>         
     <?php  }?>
     </table>
+     </div>
+    <div class="right">
+    <img src="images/Peijnenburg_Frans Bauer.jpg" alt="frans">
+    </div>
+   
+    </div>
+    </div>
+    </section>
+
     
     
     <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-57e3"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
