@@ -1,6 +1,7 @@
 <?php 
+      include("database.php");
       include("php/lid.php");
-      include("login.php");
+      require_once("login.php");
       session_start();
 ?>
 <!DOCTYPE html>
@@ -89,7 +90,7 @@
         </nav><?php
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
           echo "<a href='Inloggen.php' data-page-id='22327776' class='u-btn u-btn-round u-button-style u-custom-color-1 u-radius-50 u-btn-1'><i class='fas fa-user'></i> Welkom " . $_SESSION['gebruiker']->getVoornaam() . "!</a>
-          <a href='Registreren-page.php' data-page-id='236883568' class='u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2'>Uitloggen</a>
+          <a href=php/'logout.php' data-page-id='236883568' class='u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2'>Uitloggen</a>
           ";
       } else {
         echo "<a href='Inloggen.php' data-page-id='22327776' class='u-btn u-btn-round u-button-style u-custom-color-1 u-radius-50 u-btn-1'>Inloggen</a>
