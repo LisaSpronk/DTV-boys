@@ -1,6 +1,5 @@
 <?php 
   include("php/header.php");
-  include("database.php");
   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 
