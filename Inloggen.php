@@ -5,7 +5,7 @@
 ?>
 
     <div class="inloggen-pagina">
-      <h1>Inloggen</h1>
+      <h2>Inloggen</h2>
       <div class="inloggen">
         <div class="login-leden">
           <h3>Leden</h3>
@@ -25,7 +25,8 @@
             </form>
         </div>
       </div>
-      <a href="registreren.php" class="registreren">registreren </a>
+      <p class="p-registreren">Nog geen account?</p>
+      <a href="registreren-page.php" class="a-registreren">Registreren <i class="fas fa-arrow-right"></i></a>
     </div>
 
 <?php
