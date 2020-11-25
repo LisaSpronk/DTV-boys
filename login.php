@@ -34,7 +34,7 @@ function login($email, $wachtwoord){
         echo "<script>alert('Succes!');</script>";
         session_start();
         include("php/lid.php");
-        
+        header('Location:index.php');
         $lid = new Lid();
         $lid->setLidnr($result['Lid_nr']);
         $lid->setVoornaam($result['Lid_voornaam']);
