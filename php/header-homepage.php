@@ -1,9 +1,9 @@
 <?php 
-      include("database.php");
       include("php/lid.php");
-      require_once("login.php");
+      include("login.php");
       session_start();
 ?>
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -13,17 +13,8 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Homepage</title>
 
-    <link rel="stylesheet" href="php/header.css">
-    <link rel="stylesheet" href="css/Inloggen.css" media="screen">
-    <link rel="stylesheet" href="css/Registreren.css" media="screen">
-    <link rel="stylesheet" href="css/Banen-reserveren.css" media="screen">
-    <link rel="stylesheet" href="css/Toernooien.css" media="screen">
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-    <!-- <link rel="stylesheet" href="header.css" media="screen"> -->
-    <link rel="stylesheet" href="php/header.css" media="screen">
+    <link rel="stylesheet" href="css/Homepage.css" media="screen">
 
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -44,9 +35,8 @@
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.php">
     <meta property="og:url" content="index.php">
-    
   </head> 
-  <body class="u-body u-overlap-transparent">
+  <body class="u-body u-overlap u-overlap-transparent">
       
   <header class="u-align-right u-clearfix u-header u-header" id="sec-f56c"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="#" class="u-image u-logo u-image-1">
@@ -87,16 +77,16 @@
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
-        </nav><?php
+        </nav>
+        <?php
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
           echo "<a href='Inloggen.php' data-page-id='22327776' class='u-btn u-btn-round u-button-style u-custom-color-1 u-radius-50 u-btn-1'><i class='fas fa-user'></i> Welkom " . $_SESSION['gebruiker']->getVoornaam() . "!</a>
-          <a href=php/'logout.php' data-page-id='236883568' class='u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2'>Uitloggen</a>
+          <a href='php/logout.php' data-page-id='236883568' class='u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2'>Uitloggen</a>
           ";
       } else {
         echo "<a href='Inloggen.php' data-page-id='22327776' class='u-btn u-btn-round u-button-style u-custom-color-1 u-radius-50 u-btn-1'>Inloggen</a>
         <a href='Registreren-page.php' data-page-id='236883568' class='u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2'>Registreren</a>";
       }
       ?>
-        
       </div>
  </header>
