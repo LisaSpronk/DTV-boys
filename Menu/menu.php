@@ -12,7 +12,6 @@
     }
     
     //Sluit verbinding met database
-    $result = $conn->query($sql);
 ?>
 
 <html lang="en">
