@@ -7,4 +7,6 @@
     $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
 
+    //Krijg je alle leden die mee doen aan een toernooi
+    //SELECT * FROM Leden INNER JOIN Toernooien ON Lid_toernooi = toernooi_ID
 ?>
