@@ -78,12 +78,12 @@
             return $this->Lid_woonplaats;
         }
 
-        function setTelefoon($Lid_telefooon) {
-            $this->Lid_telefoon = $Lid_telefoon;
+        function setTelefoon($Lid_telefoonnr) {
+            $this->Lid_telefoonnr = $Lid_telefoonnr;
         }
     
-        function getTelefoon() {
-            return $this->Lid_telefoon;
+        function getTelefoonnr() {
+            return $this->Lid_telefoonnr;
         }
 
         function setEmail($Lid_email) {

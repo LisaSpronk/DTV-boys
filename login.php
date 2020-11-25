@@ -1,7 +1,7 @@
 <?php
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    login($_POST["email"], $_POST["wachtwoord"]); 
+    login($_POST["email"], hash('sha256', $_POST['wachtwoord'])); 
 }
 
 
@@ -16,7 +16,7 @@ function login($email, $wachtwoord){
 
 
     $stmt = $conn->prepare('SELECT * FROM Leden WHERE Lid_email= ? AND Lid_wachtwoord = ?;');
-    $stmt->bind_param("ss", $_POST['email'], $_POST['wachtwoord']);   
+    $stmt->bind_param("ss", $email, $wachtwoord);   
     $stmt->execute();
     
     //vraag resultaat
@@ -44,7 +44,7 @@ function login($email, $wachtwoord){
         $lid->setStraat($result['Lid_straat']);
         $lid->setHuisnr($result['Lid_huisnr']);
         $lid->setWoonplaats($result['Lid_woonplaats']);
-        $lid->setTelefoon($result['Lid_telefoon']);
+        $lid->setTelefoon($result['Lid_telefoonnr']);
         $lid->setEmail($result['Lid_email']);
         $lid->setGeslacht($result['Lid_geslacht']);
         $lid->setGeboortedatum($result['Lid_geboortedatum']);
