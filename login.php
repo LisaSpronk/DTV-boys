@@ -29,7 +29,7 @@ function login($email, $wachtwoord){
     if ($result == null) {
         echo "<script>alert('Incorrecte gegevens!');</script>";
 
-        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
+        //echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
     } else {
         echo "<script>alert('Succes!');</script>";
         session_start();
