@@ -1,8 +1,8 @@
 <?php
-    include('user.php');
+    // include('user.php');
     session_start();
     include('database.php');
-    $user = $_SESSION['user'];
+    // $user = $_SESSION['user'];
 
 
 //   Sluit verbinding met database
