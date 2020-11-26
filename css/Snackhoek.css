@@ -1,3 +1,36 @@
 .u-section-1 .u-sheet-1 {
   min-height: 500px;
 }
+.left{
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+.content{
+  font-family: 'Open Sans',sans-serif;
+  display: grid;
+  grid-template-columns: 30% 100% 100%;
+}
+th,td{
+padding: 5px 20px;
+text-align: left;
+}
+
+.right img{
+  width: 100%;
+}
+.button1{
+  border-radius:15px;
+  background-color: #7da87b ; /* Green */
+  border: none;
+  color: white;
+  padding: auto;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.button1:hover{
+  background-color: #6c9c69  ;
+}
