@@ -1,6 +1,6 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if(isset($_POST['login-submit'])){
     login($_POST["email"], hash('sha256', $_POST['wachtwoord'])); 
 }
 
