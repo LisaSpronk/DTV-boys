@@ -19,14 +19,14 @@
 ?>
 <div id="content_beheer">
     <form method="POST">
-    <input type="radio" name="categorie" value="snacks">
+    <input type="radio" name="categorie" value="snacks" >
         <label for="snack">snacks</label>
     <input type="radio" name="categorie" value="drinken">
         <label for="snack">drinken</label>
     <input type="radio" name="categorie" value="alles">
         <label for="snack">alles</label>
     <input type="submit" name="submit" value="select">
-    <a href="menuAdd.php"><button>aanmaken</button></a>
+    <a href="beheer_snackhoek_add.php">aanmaken</a>
     </form>
     
    <table>

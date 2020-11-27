@@ -17,21 +17,21 @@
     }
 include('beheer_header.php');?>
 <form  method="POST">
-    <input type="text" name="naam" value ="<?php echo$row['Menu_naam'];?>">
-    <input type="number" name="prijs" value="<?php echo$row['Menu_prijs'];?>" step="0.01" min="0,05" max="20">
+    <input type="text" name="naam" value ="<?php echo$row['Menu_naam'];?>" required>
+    <input type="number" name="prijs" value="<?php echo$row['Menu_prijs'];?>" step="0.01" min="0,05" max="20" required>
     <?php 
     if($row['Menu_categorie']=="snacks"){
        ?>
-        <input type="radio" name="categorie" value="snacks" checked>
+        <input type="radio" name="categorie" value="snacks" checked required>
         <label for="snack">snacks</label>
-        <input type="radio" name="categorie" value="drinken">
+        <input type="radio" name="categorie" value="drinken" required>
         <label for="snack">drinken</label>
         <?php
     }else{
         ?>
-        <input type="radio" name="categorie" value="snacks">
+        <input type="radio" name="categorie" value="snacks" required>
         <label for="snack">snacks</label>
-        <input type="radio" name="categorie" value="drinken" checked>
+        <input type="radio" name="categorie" value="drinken" checked required>
         <label for="snack">drinken</label>
         <?php
     } ?>
