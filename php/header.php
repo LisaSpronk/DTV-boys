@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/Registreren.css" media="screen">
     <link rel="stylesheet" href="css/Banen-reserveren.css" media="screen">
     <link rel="stylesheet" href="css/Toernooien.css" media="screen">
+    <link rel="stylesheet" href="css/Profiel-pagina.css" media="screen">
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
     
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -89,7 +90,7 @@
           </div>
         </nav><?php
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-          echo "<a href='Inloggen.php' data-page-id='22327776' class='u-btn u-btn-round u-button-style u-custom-color-1 u-radius-50 u-btn-1'><i class='fas fa-user'></i> Welkom " . $_SESSION['gebruiker']->getVoornaam() . "!</a>
+          echo "<a href=profiel-pagina.php data-page-id='22327776' class='u-btn u-btn-round u-button-style u-custom-color-1 u-radius-50 u-btn-1'><i class='fas fa-user'></i> Welkom " . $_SESSION['gebruiker']->getVoornaam() . "!</a>
           <a href=php/logout.php data-page-id='236883568' class='u-btn u-btn-round u-button-style u-custom-color-3 u-radius-50 u-btn-2'>Uitloggen</a>
           ";
       } else {
