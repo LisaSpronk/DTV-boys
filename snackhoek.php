@@ -90,6 +90,3 @@ $stmt->execute();
     </section>
   </body>
 </html>
-<?php
-include("php/footer.php");
-?>
