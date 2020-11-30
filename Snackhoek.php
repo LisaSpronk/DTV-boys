@@ -15,7 +15,7 @@ if(isset($_POST['snacks'])){
     $title="Snacks";
     $stmt->execute();
 } 
-
+$stmt->execute();
 //Sluit verbinding met database
 ?>
 
@@ -90,3 +90,6 @@ if(isset($_POST['snacks'])){
     </section>
   </body>
 </html>
+<?php
+include("php/footer.php");
+?>
