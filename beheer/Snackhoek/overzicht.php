@@ -1,6 +1,6 @@
 <?php
-    include('beheer_header.php');
-    include('database.php');
+    include('../beheer_header.php');
+    include('../database.php');
     $stmt= $conn->prepare(' SELECT * FROM menu');
     if(isset($_POST['submit'])){
         if($_POST['categorie']=='alles'){
@@ -26,7 +26,7 @@
     <input type="radio" name="categorie" value="alles">
         <label for="snack">alles</label>
     <input type="submit" name="submit" value="select">
-    <a href="beheer_snackhoek_add.php">aanmaken</a>
+    <a href="toevoegen.php">aanmaken</a>
     </form>
     
    <table>
@@ -46,10 +46,10 @@
             <td><?php echo $row['Menu_naam']?></td>
             <td>€<?php  echo $row['Menu_prijs']?></td>
             <td><?php  echo $row['Menu_categorie']?></td>
-            <td><a href="beheer_snackhoek_change.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></td>
-            <td><a href="beheer_snackhoek_delete.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></td>
+            <td><a href="bewerken.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></td>
+            <td><a href="verwijderen.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></td>
             </tr>         
     <?php  }?>
     </table>
 </div>
-<?php include('beheer_footer.php'); ?>
+<?php include('../beheer_footer.php'); ?>

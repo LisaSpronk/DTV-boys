@@ -1,11 +1,11 @@
 <?php
-    include('beheer_header.php');
-    include('database.php');
+    include('../beheer_header.php');
+    include('../database.php');
     if(isset($_POST['submit'])){
-    $stmt= $conn->prepare(' INSERT INTO menu ( Menu_naam, Menu_prijs, Menu_categorie) VALUES (?,?,?)');
+    $stmt= $conn->prepare(' INSERT INTO Menu ( Menu_naam, Menu_prijs, Menu_categorie) VALUES (?,?,?)');
     $stmt->bind_param("sss", $_POST['naam'], $_POST['prijs'], $_POST['categorie']);
     $stmt->execute();
-    echo"<script> window.location.href = 'http://localhost/DTV/Menu/beheer_snackhoek.php'; </script>";
+    echo"<script> window.location.href = 'http://localhost/DTV/DTV-boys/beheer/Snackhoek/overzicht.php'; </script>";
     }
 ?>
 <div id="content_beheer">
@@ -19,4 +19,4 @@
     <input type="submit" name="submit" value="submit">
 </form>
 </div>
-<?php include('beheer_footer.php'); ?>
+<?php include('../beheer_footer.php'); ?>

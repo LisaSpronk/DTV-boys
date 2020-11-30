@@ -1,5 +1,5 @@
 <?php
-    include('database.php');
+    include('../database.php');
     $id = $_GET['id'];
     $sql1 = 'SELECT * FROM menu WHERE Menu_id="'.$id.'"';
     $result = $conn->query($sql1);
@@ -12,33 +12,26 @@
         $stmt->bind_param("sss", $_POST['naam'], $_POST['prijs'], $_POST['categorie']);
         $stmt->execute();
         $conn->close();
-        echo"<script> window.location.href = 'http://localhost/DTV/Menu/menuAdmin.php'; </script>";
+        echo"<script> window.location.href = 'http://localhost/DTV/DTV-boys/beheer/Snackhoek/overzicht.php'; </script>";
         
     }
-?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+include('../beheer_header.php');?>
 <form  method="POST">
-    <input type="text" name="naam" value ="<?php echo$row['Menu_naam'];?>">
-    <input type="number" name="prijs" value="<?php echo$row['Menu_prijs'];?>" step="0.01" min="0,05" max="20">
+    <input type="text" name="naam" value ="<?php echo$row['Menu_naam'];?>" required>
+    <input type="number" name="prijs" value="<?php echo$row['Menu_prijs'];?>" step="0.01" min="0,05" max="20" required>
     <?php 
     if($row['Menu_categorie']=="snacks"){
        ?>
-        <input type="radio" name="categorie" value="snacks" checked>
+        <input type="radio" name="categorie" value="snacks" checked required>
         <label for="snack">snacks</label>
-        <input type="radio" name="categorie" value="drinken">
+        <input type="radio" name="categorie" value="drinken" required>
         <label for="snack">drinken</label>
         <?php
     }else{
         ?>
-        <input type="radio" name="categorie" value="snacks">
+        <input type="radio" name="categorie" value="snacks" required>
         <label for="snack">snacks</label>
-        <input type="radio" name="categorie" value="drinken" checked>
+        <input type="radio" name="categorie" value="drinken" checked required>
         <label for="snack">drinken</label>
         <?php
     } ?>
@@ -46,5 +39,4 @@
     <input type="submit" name="save" value="submit">
     
 </form>
-</body>
-</html>
+<?php include('../beheer_footer.php');?>

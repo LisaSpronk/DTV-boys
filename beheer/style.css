@@ -44,4 +44,7 @@ nav{
     border: 2px solid black;
     background-color: #6c9c69;
 }
-
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
