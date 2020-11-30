@@ -1,0 +1,75 @@
+
+.registreren-pagina {
+  padding: 0 50px;
+  margin: 50px 0;
+}
+
+.form-registreren input {
+  margin-bottom: 10px;
+}
+
+.form-registreren input:focus{
+  outline: none;
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+  border-bottom: 3px solid #7da87b;
+}
+
+.form-registreren input:focus:invalid{
+  border-bottom: 3px solid red;
+}
+
+.form-gegevens {
+  display: flex;
+}
+
+.form-voornaam, .form-achternaam {
+  width: 40%;
+}
+
+.form-tussenvoegsel {
+  width: 20%;
+  margin: 0 10px;
+}
+
+.form-straat, .form-woonplaats {
+  width: 40%;
+}
+
+.form-huisnr {
+  width: 20%;
+  margin: 0 10px;
+}
+
+.form-geslacht {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-geslacht input {
+  margin-right: 5px;
+}
+
+.form-geslacht input[type="radio"] {
+  margin-bottom: 0;
+}
+
+.form-geslacht label {
+  margin-right: 15px;
+}
+
+.btn-registreren {
+  padding: 10px 20px;
+  background-color: #7da87b;
+  color: white;
+  margin: 20px 0 0 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-registreren:hover, .btn-registreren:focus {
+  outline: none;
+  background-color: rgba(125, 168, 123, 0.8);
+}
+
