@@ -4,18 +4,18 @@ include("php/header.php");
 
 include('database.php');
 $title="Drinken";
-$stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie ="drinken"');
+$stmt= $conn->prepare('SELECT * FROM Menu WHERE Menu_categorie ="drinken"');
 if(isset($_POST['drinken'])){
     $title="Drinken";
-    $stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie ="drinken"');
+    $stmt= $conn->prepare('SELECT * FROM Menu WHERE Menu_categorie ="drinken"');
     $stmt->execute();
 } 
 if(isset($_POST['snacks'])){
-    $stmt= $conn->prepare('SELECT * FROM menu WHERE Menu_categorie ="snacks"');
+    $stmt= $conn->prepare('SELECT * FROM Menu WHERE Menu_categorie ="snacks"');
     $title="Snacks";
     $stmt->execute();
 } 
-
+$stmt->execute();
 //Sluit verbinding met database
 ?>
 

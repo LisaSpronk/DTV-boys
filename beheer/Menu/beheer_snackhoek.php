@@ -1,13 +1,13 @@
 <?php
     include('beheer_header.php');
     include('database.php');
-    $stmt= $conn->prepare(' SELECT * FROM menu');
+    $stmt= $conn->prepare(' SELECT * FROM Menu');
     if(isset($_POST['submit'])){
         if($_POST['categorie']=='alles'){
-            $stmt= $conn->prepare(' SELECT * FROM menu');
+            $stmt= $conn->prepare(' SELECT * FROM Menu');
             $stmt->execute();
         }else{
-            $stmt= $conn->prepare(' SELECT * FROM menu WHERE Menu_categorie =?');
+            $stmt= $conn->prepare(' SELECT * FROM Menu WHERE Menu_categorie =?');
             $stmt->bind_param("s", $_POST['categorie']);
             $stmt->execute();
             
