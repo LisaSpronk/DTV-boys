@@ -13,7 +13,7 @@ include("php/header.php");
         </ul>
     </nav>
 
-    <section class="profiel-gegevens profiel-active">
+    <section class="profiel-gegevens profiel-active" id="#profiel-gegevens">
         <h4> <?php echo $_SESSION['gebruiker']->getVoornaam() . " " . $_SESSION['gebruiker']->getTussenvoegsel() . " " . $_SESSION['gebruiker']->getAchternaam(); ?> </h4>
         <p> <?php echo $_SESSION['gebruiker']->getEmail(); ?> </p>
 
@@ -26,9 +26,15 @@ include("php/header.php");
 
         <div class="profiel-gegevens--overig">
             <p class="p-bold"> Overige gegevens </p>
-            <p> Telefoonnummer: </p>
-            <p> Lidnummer: </p>
+            <p> Telefoonnummer: <?php echo $_SESSION['gebruiker']->getTelefoonnr(); ?> </p>
+            <p> Lidnummer: <?php echo $_SESSION['gebruiker']->getLidnr(); ?> </p>
         </div>
+
+        <div class="gegevens-wijzigen">
+            <a href="profiel-wijzigen.php" class="wijzigen"> <i class="fas fa-user-edit"></i> Gegevens wijzigen </a>
+            <a href="#" class="verwijder-account"> Verwijder account </a>
+        </div>
+        
     </section>
 
     <section class="profiel-reserveringen">
@@ -38,6 +44,17 @@ include("php/header.php");
     <section class="profiel-toernooien">
         <p>hoi</p>
     </section>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup__content">
+        <div class="popup__text">
+            <a href="#" class="popup__close">&times;</a>
+            <h4> Weet je zeker dat je het account wilt verwijderen?</h4>
+            <a href="verwijder-account.php" class="a-text"> Ja </a> 
+            <a href="#" class="a-text"> Nee </a>
+        </div>
+    </div>
 </div>
 
 

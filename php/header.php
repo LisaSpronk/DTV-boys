@@ -26,6 +26,7 @@
     <!-- <link rel="stylesheet" href="header.css" media="screen"> -->
     <link rel="stylesheet" href="php/header.css" media="screen">
 
+    <script class="u-script" type="text/javascript" src="profiel-popup.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 2.30.1, nicepage.com">

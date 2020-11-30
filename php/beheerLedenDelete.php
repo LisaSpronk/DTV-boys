@@ -9,7 +9,7 @@ $row=$result->fetch_assoc();
 
 if(isset($_POST['delete'])){
 
-echo $ledenDeleteQuery = "DELETE FROM Leden
+$ledenDeleteQuery = "DELETE FROM Leden
                      WHERE Lid_nr = {$id}";
 
 $stmt = $conn->prepare($ledenDeleteQuery);
