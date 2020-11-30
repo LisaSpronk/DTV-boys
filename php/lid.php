@@ -12,8 +12,7 @@
         private $Lid_geslacht;
         private $Lid_geboortedatum;
         private $Lid_sinds;
-        private $Lid_toernooi;
-        
+
         //getters en setters
         function setLidnr($lid_nr) {
             $this->lid_nr = $lid_nr;
@@ -117,14 +116,6 @@
     
         function getLidsinds() {
             return $this->Lid_sinds;
-        }
-
-        function setLidtoernooi($Lid_toernooi) {
-            $this->Lid_toernooi = $Lid_toernooi;
-        }
-    
-        function getLidtoernooi() {
-            return $this->Lid_toernooi;
         }
     }
 
