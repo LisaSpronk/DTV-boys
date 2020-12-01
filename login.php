@@ -43,7 +43,7 @@ function login($email, $wachtwoord){
         $lid->setStraat($result['Lid_straat']);
         $lid->setHuisnr($result['Lid_huisnr']);
         $lid->setWoonplaats($result['Lid_woonplaats']);
-        $lid->setTelefoon($result['Lid_telefoonnr']);
+        $lid->setTelefoonnr($result['Lid_telefoonnr']);
         $lid->setEmail($result['Lid_email']);
         $lid->setGeslacht($result['Lid_geslacht']);
         $lid->setGeboortedatum($result['Lid_geboortedatum']);
