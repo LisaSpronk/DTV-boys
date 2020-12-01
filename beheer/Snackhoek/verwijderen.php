@@ -1,15 +1,15 @@
 <?php
-    include('database.php');
-    include('beheer_header.php');
+    include('../database.php');
+    include('../beheer_header.php');
     $id = $_GET['id'];
 if(isset($_POST['verwijderen'])){
     $sql = 'DELETE FROM Menu WHERE Menu_id = "'.$id.'"';
     $conn->query($sql);
     $conn->close();
-    echo"<script> window.location.href = 'http://localhost/DTV/Menu/beheer_snackhoek.php'; </script>";
+    echo"<script> window.location.href = 'http://localhost/DTV/DTV-boys/beheer/Snackhoek/overzicht.php'; </script>";
 }
 if(isset($_POST['anuleren'])){
-    echo"<script> window.location.href = 'http://localhost/DTV/Menu/beheer_snackhoek.php'; </script>";
+    echo"<script> window.location.href = 'http://localhost/DTV/DTV-boys/beheer/Snackhoek/overzicht.php'; </script>";
 }
    ?>
     <div id="content_beheer">
@@ -19,5 +19,5 @@ if(isset($_POST['anuleren'])){
         </form>
     </div>
    <?php
-   include('beheer_footer.php');
+   include('../beheer_footer.php');
     

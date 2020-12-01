@@ -1,6 +1,6 @@
 <?php
 
-include('database.php');
+include('../database.php');
 $title="Drinken";
 $stmt= $conn->prepare('SELECT * FROM Menu WHERE Menu_categorie ="drinken"');
 if(isset($_POST['drinken'])){
