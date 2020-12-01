@@ -15,8 +15,27 @@ if(isset($_POST['profiel-wijzigen'])){
     $stmt->bind_param("sssssssss", $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["straat"], $_POST["huisnr"], $_POST["woonplaats"], $_POST["telefoonnr"], $_POST["email"], $_POST["geboortedatum"]);
     $stmt->execute();
 
-    echo '<script>alert("Gegevens succesvol bijgewerkt!")</script>';
+    // $getLidQuery = "SELECT * FROM Leden WHERE Lid_nr = '$lidnr'";
+    // $result=$conn->query($getLidQuery);
+    // $row=$result->fetch_assoc();
 
+    // $lid = unserialize($_SESSION['gebruiker']);
+
+    // $lid->setLidnr($row['Lid_nr']);
+    // $lid->setVoornaam($row['Lid_voornaam']);
+    // $lid->setTussenvoegsel($row['Lid_tussenvoegsel']);
+    // $lid->setAchternaam($row['Lid_achternaam']);
+    // $lid->setWachtwoord($row['Lid_wachtwoord']);
+    // $lid->setStraat($row['Lid_straat']);
+    // $lid->setHuisnr($row['Lid_huisnr']);
+    // $lid->setWoonplaats($row['Lid_woonplaats']);
+    // $lid->setTelefoonnr($row['Lid_telefoonnr']);
+    // $lid->setEmail($row['Lid_email']);
+    // $lid->setGeslacht($row['Lid_geslacht']);
+    // $lid->setGeboortedatum($row['Lid_geboortedatum']);
+    // $lid->setLidsinds($row['Lid_sinds']);
+
+    echo '<script>alert("Gegevens succesvol bijgewerkt!")</script>';
 }
 ?>
 
