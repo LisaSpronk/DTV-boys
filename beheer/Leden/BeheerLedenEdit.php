@@ -1,5 +1,6 @@
 <?php
-include("database.php");
+include("../database.php");
+include("../beheer_header.php");
 
 $id=$_GET['id'];
 
@@ -47,6 +48,7 @@ header("Location: beheerLeden.php");
     <input type="date" name="Lid_geboortedatum" placeholder="geboortedatum" value="<?php echo $row['Lid_geboortedatum'];?>">
     <input type="date" name="Lid_sinds" placeholder="Lid sinds" value="<?php echo $row['Lid_sinds'];?>">
 
-    <input type="submit" name="save" value="submit">
+    <input type="submit" name="save" value="wijzigen">
     </form>
 </section>
+<?php include("../beheer_footer.php");?>

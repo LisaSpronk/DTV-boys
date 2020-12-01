@@ -2,10 +2,10 @@
 
     include('database.php');
     if($_POST['categorie']=='alles'){
-        $stmt= $conn->prepare(' SELECT * FROM Menu');
+        $stmt= $conn->prepare(' SELECT * FROM menu');
         $stmt->execute();
     }else{
-        $stmt= $conn->prepare(' SELECT * FROM Menu WHERE Menu_categorie =?');
+        $stmt= $conn->prepare(' SELECT * FROM menu WHERE Menu_categorie =?');
         $stmt->bind_param("s", $_POST['categorie']);
         $stmt->execute();
         

@@ -1,6 +1,6 @@
 <?php
-include("database.php");
-
+include("../database.php");
+include("../beheer_header.php");
 if(isset($_POST['submit'])){
 
 $pwd=hash('sha256', $_POST['Lid_wachtwoord']); 
@@ -46,3 +46,4 @@ header("Location: beheerLeden.php");
     <input type="submit" name="submit" value="submit">
     </form>
 </section>
+<?php include("../beheer_footer.php");?>

@@ -1,13 +1,13 @@
 <?php
-    include('beheer_header.php');
-    include('database.php');
-    $stmt= $conn->prepare(' SELECT * FROM menu');
+    include('../beheer_header.php');
+    include('../database.php');
+    $stmt= $conn->prepare(' SELECT * FROM Menu');
     if(isset($_POST['submit'])){
         if($_POST['categorie']=='alles'){
-            $stmt= $conn->prepare(' SELECT * FROM menu');
+            $stmt= $conn->prepare(' SELECT * FROM Menu');
             $stmt->execute();
         }else{
-            $stmt= $conn->prepare(' SELECT * FROM menu WHERE Menu_categorie =?');
+            $stmt= $conn->prepare(' SELECT * FROM Menu WHERE Menu_categorie =?');
             $stmt->bind_param("s", $_POST['categorie']);
             $stmt->execute();
             
@@ -19,14 +19,14 @@
 ?>
 <div id="content_beheer">
     <form method="POST">
-    <input type="radio" name="categorie" value="snacks">
+    <input type="radio" name="categorie" value="snacks" >
         <label for="snack">snacks</label>
     <input type="radio" name="categorie" value="drinken">
         <label for="snack">drinken</label>
     <input type="radio" name="categorie" value="alles">
         <label for="snack">alles</label>
     <input type="submit" name="submit" value="select">
-    <a href="menuAdd.php"><button>aanmaken</button></a>
+    <a href="toevoegen.php">aanmaken</a>
     </form>
     
    <table>
@@ -46,10 +46,10 @@
             <td><?php echo $row['Menu_naam']?></td>
             <td>€<?php  echo $row['Menu_prijs']?></td>
             <td><?php  echo $row['Menu_categorie']?></td>
-            <td><a href="beheer_snackhoek_change.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></td>
-            <td><a href="beheer_snackhoek_delete.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></td>
+            <td><a href="bewerken.php?id=<?php echo$row['Menu_id']?>">Bewerken</a></td>
+            <td><a href="verwijderen.php?id=<?php echo$row['Menu_id']?>">Verwijderen</a></td>
             </tr>         
     <?php  }?>
     </table>
 </div>
-<?php include('beheer_footer.php'); ?>
+<?php include('../beheer_footer.php'); ?>

@@ -34,10 +34,7 @@
     
     <div>
      
-      <?php 
-       
-      ?>                     
-     
+
 
     </div>
     <?php include('php/footer.php'); ?>

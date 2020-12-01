@@ -1,5 +1,7 @@
 <?php
-include("database.php");
+include("../database.php");
+include("../beheer_header.php");
+
 
 
 $ledenQuery = "SELECT * FROM Leden";
@@ -7,14 +9,17 @@ $stmt = $conn->prepare($ledenQuery);
 $stmt->execute();
 $result=$stmt->get_result();
 
-// include("beheerHeader.php");
+//include("beheerHeader.php");
 // include("beheerNav.php");
 ?>
+<style>
+<?php include('beheer.css'); ?>
+</style>
 <section>
 
-<a href="BeheerLedenAdd.php"> toevoegen </a>
 
-<table>
+
+<table class="overzicht_tabel">
 <tr>
     <th>Lid nummer</th>
     <th>Voornaam</th>
@@ -28,6 +33,7 @@ $result=$stmt->get_result();
     <th>Geslacht</th>
     <th>Geboortedatum</th>
     <th>Lid sinds</th>
+    <th><a href="BeheerLedenAdd.php"> toevoegen </a></th>
 </tr>
 
 <?php while($row=$result->fetch_assoc()): ?>
@@ -44,7 +50,7 @@ $result=$stmt->get_result();
         <td><?php echo $row['Lid_geslacht'];?></td>
         <td><?php echo date('d-m-Y', strtotime($row['Lid_geboortedatum']));?></td>
         <td><?php echo date('d-m-Y', strtotime($row['Lid_sinds']));?></td>
-        <td><a href="beheerLedenEdit.php?id=<?php echo $row['Lid_nr'];?>"> bewerken </button> <td>
+        <td><a href="beheerLedenEdit.php?id=<?php echo $row['Lid_nr'];?>"> bewerken </a> <td>
         <td><a href="beheerLedenDelete.php?id=<?php echo $row['Lid_nr'];?>"> verwijderen </a> <td>
     </tr>
 
@@ -54,3 +60,4 @@ $result=$stmt->get_result();
 </table>
 
 </section>
+<?phpinclude('../beheer_footer');?>

@@ -1,5 +1,6 @@
 <?php
-include("database.php");
+include("../database.php");
+include("../beheer_header.php");
 
 $id=$_GET['id'];
 
@@ -9,7 +10,7 @@ $row=$result->fetch_assoc();
 
 if(isset($_POST['delete'])){
 
-echo $ledenDeleteQuery = "DELETE FROM Leden
+$ledenDeleteQuery = "DELETE FROM Leden
                      WHERE Lid_nr = {$id}";
 
 $stmt = $conn->prepare($ledenDeleteQuery);
@@ -36,3 +37,4 @@ header("Location: beheerLeden.php");
     <a href="beheerLeden.php"> annuleren </a>
     </form>
 </section>
+<?php include("../beheer_footer.php");?>
