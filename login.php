@@ -14,7 +14,6 @@ function login($email, $wachtwoord){
     $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
 
-
     $stmt = $conn->prepare('SELECT * FROM Leden WHERE Lid_email= ? AND Lid_wachtwoord = ?;');
     $stmt->bind_param("ss", $email, $wachtwoord);   
     $stmt->execute();
@@ -44,7 +43,7 @@ function login($email, $wachtwoord){
         $lid->setStraat($result['Lid_straat']);
         $lid->setHuisnr($result['Lid_huisnr']);
         $lid->setWoonplaats($result['Lid_woonplaats']);
-        $lid->setTelefoon($result['Lid_telefoonnr']);
+        $lid->setTelefoonnr($result['Lid_telefoonnr']);
         $lid->setEmail($result['Lid_email']);
         $lid->setGeslacht($result['Lid_geslacht']);
         $lid->setGeboortedatum($result['Lid_geboortedatum']);

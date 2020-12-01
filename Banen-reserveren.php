@@ -26,7 +26,7 @@
       <input type="submit" value="Kies datum">
     </form>
     </div>
-    
+  </div>
 <?php
 
 include("php/footer.php");
