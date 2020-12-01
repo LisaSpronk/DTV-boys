@@ -15,27 +15,26 @@ if(isset($_POST['profiel-wijzigen'])){
     $stmt->bind_param("sssssssss", $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["straat"], $_POST["huisnr"], $_POST["woonplaats"], $_POST["telefoonnr"], $_POST["email"], $_POST["geboortedatum"]);
     $stmt->execute();
 
-    // $getLidQuery = "SELECT * FROM Leden WHERE Lid_nr = '$lidnr'";
-    // $result=$conn->query($getLidQuery);
-    // $row=$result->fetch_assoc();
+    $getLidQuery = "SELECT * FROM Leden WHERE Lid_nr = '$lidnr'";
+    $result=$conn->query($getLidQuery);
+    $row=$result->fetch_assoc();
 
-    // $lid = unserialize($_SESSION['gebruiker']);
+    $_SESSION['gebruiker']->setLidnr($row['Lid_nr']);
+    $_SESSION['gebruiker']->setVoornaam($row['Lid_voornaam']);
+    $_SESSION['gebruiker']->setTussenvoegsel($row['Lid_tussenvoegsel']);
+    $_SESSION['gebruiker']->setAchternaam($row['Lid_achternaam']);
+    $_SESSION['gebruiker']->setWachtwoord($row['Lid_wachtwoord']);
+    $_SESSION['gebruiker']->setStraat($row['Lid_straat']);
+    $_SESSION['gebruiker']->setHuisnr($row['Lid_huisnr']);
+    $_SESSION['gebruiker']->setWoonplaats($row['Lid_woonplaats']);
+    $_SESSION['gebruiker']->setTelefoonnr($row['Lid_telefoonnr']);
+    $_SESSION['gebruiker']->setEmail($row['Lid_email']);
+    $_SESSION['gebruiker']->setGeslacht($row['Lid_geslacht']);
+    $_SESSION['gebruiker']->setGeboortedatum($row['Lid_geboortedatum']);
+    $_SESSION['gebruiker']->setLidsinds($row['Lid_sinds']);
 
-    // $lid->setLidnr($row['Lid_nr']);
-    // $lid->setVoornaam($row['Lid_voornaam']);
-    // $lid->setTussenvoegsel($row['Lid_tussenvoegsel']);
-    // $lid->setAchternaam($row['Lid_achternaam']);
-    // $lid->setWachtwoord($row['Lid_wachtwoord']);
-    // $lid->setStraat($row['Lid_straat']);
-    // $lid->setHuisnr($row['Lid_huisnr']);
-    // $lid->setWoonplaats($row['Lid_woonplaats']);
-    // $lid->setTelefoonnr($row['Lid_telefoonnr']);
-    // $lid->setEmail($row['Lid_email']);
-    // $lid->setGeslacht($row['Lid_geslacht']);
-    // $lid->setGeboortedatum($row['Lid_geboortedatum']);
-    // $lid->setLidsinds($row['Lid_sinds']);
-
-    echo '<script>alert("Gegevens succesvol bijgewerkt!")</script>';
+    echo '<script>alert("Gegevens succesvol bijgewerkt!");</script>';
+    echo "<script>window.location.href = 'http://localhost/Examen/DTV-boys/profiel-pagina.php' </script>";
 }
 ?>
 
