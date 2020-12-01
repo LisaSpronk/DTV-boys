@@ -19,7 +19,7 @@
     <?php
       $date = date('d-m-Y');
 
-      for ($i = 0; $i < 7; $i++) {
+      for ($i = 0; $i < 8; $i++) {
         echo "<option value=". date('Y-m-d', strtotime($date. ' + '. $i . ' days')) . ">" . date('d-m-Y', strtotime($date. ' + '. $i . ' days')) . "</option>";
         //echo date('d-m-Y', strtotime($date. ' + '. $i . ' days'));
         }

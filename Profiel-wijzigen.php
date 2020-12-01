@@ -57,7 +57,7 @@ if(isset($_POST['profiel-wijzigen'])){
         </div>
       
             <label for="telefoonnr" class="u-form-control-hidden u-label">Telefoonnr</label>
-            <input type="tel" placeholder="Telefoonnummer*" value="<?php echo $_SESSION['gebruiker']->getTelefoonnr(); ?> (bijv. +31 6 12345678)" id="telefoonnr" name="telefoonnr" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            <input type="tel" placeholder="Telefoonnummer*" value="<?php echo $_SESSION['gebruiker']->getTelefoonnr(); ?>" id="telefoonnr" name="telefoonnr" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
 
             <label for="geboortedatum" class="u-form-control-hidden u-label"></label>
             <input type="date" placeholder="Geboortedatum" value="<?php echo $_SESSION['gebruiker']->getGeboortedatum(); ?>" id="geboortedatum" name="geboortedatum" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
