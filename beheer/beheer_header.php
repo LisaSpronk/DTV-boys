@@ -25,7 +25,7 @@ if (strpos($url,'index') !== false) {
     <div id="container_beheer">
         <header>
             <div class="sides">
-            <button onclick="history.go(-1);"><i class=""></i> </button>
+            <button onclick="history.go(-1);">Terug</button>
             </div>
             <nav>
                 <div class="item"><a class="<?php echo$home; ?>" href="../index.php">Home</a></div>
