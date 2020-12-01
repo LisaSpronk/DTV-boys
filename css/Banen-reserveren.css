@@ -9,3 +9,42 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
+.flexcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.overzicht-banen {
+  width: 30%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.overzicht-banen table {
+  width: 100%;
+}
+
+.overzicht-banen tr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overzicht-banen tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.overzicht-banen td input{
+  color: #7da87b;
+  background-color: transparent;
+  border: none;
+  margin-left: 20px;
+}
+
+.overzicht-banen td input:hover {
+  cursor: pointer;
+  color: rgba(125, 168, 123, 0.6);
+}
