@@ -31,6 +31,8 @@ function login($email, $wachtwoord){
 
         echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
     } else {
+        $_SESSION['beheer']=True;
+        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/beheer/index.php </script>";
         echo "<script>alert('Succes!');</script>";
 
         //echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";

@@ -1,7 +1,10 @@
 <?php
+// if($_SESSION['beheer']!== True){
+//     echo "<script>window.location.replace = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
+//     echo "<script>alert('U bent niet gemachtiged om deze pagina te bezoeken!');</script>";
+// }
+/*Omdat het beheer nog niet op de server staat en de verschillende linkjes niet overeen komen om goed te navigeren tussen de pagina's heeft het op het moment niet veel zin om het uit te proberen.(Teun)*/
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-
-
 if (strpos($url,'Snackhoek') !== false) {
     $snackhoek="inactiveLink";
 }
