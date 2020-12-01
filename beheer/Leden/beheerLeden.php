@@ -9,12 +9,8 @@ $stmt = $conn->prepare($ledenQuery);
 $stmt->execute();
 $result=$stmt->get_result();
 
-//include("beheerHeader.php");
-// include("beheerNav.php");
 ?>
-<style>
-<?php include('beheer.css'); ?>
-</style>
+
 <section>
 
 <a href="BeheerLedenAdd.php"> toevoegen </a>
