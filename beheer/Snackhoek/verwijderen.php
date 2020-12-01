@@ -3,7 +3,7 @@
     include('../beheer_header.php');
     $id = $_GET['id'];
 if(isset($_POST['verwijderen'])){
-    $sql = 'DELETE FROM menu WHERE Menu_id = "'.$id.'"';
+    $sql = 'DELETE FROM Menu WHERE Menu_id = "'.$id.'"';
     $conn->query($sql);
     $conn->close();
     echo"<script> window.location.href = 'http://localhost/DTV/DTV-boys/beheer/Snackhoek/overzicht.php'; </script>";

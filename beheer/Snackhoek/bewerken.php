@@ -1,14 +1,14 @@
 <?php
     include('../database.php');
     $id = $_GET['id'];
-    $sql1 = 'SELECT * FROM menu WHERE Menu_id="'.$id.'"';
+    $sql1 = 'SELECT * FROM Menu WHERE Menu_id="'.$id.'"';
     $result = $conn->query($sql1);
     $row = $result->fetch_assoc();
 
 
 
     if(isset($_POST['save'])){
-        $stmt= $conn->prepare(' UPDATE menu SET Menu_naam = ? , Menu_prijs = ?, Menu_categorie = ? WHERE Menu_id = "'.$id.'"');
+        $stmt= $conn->prepare(' UPDATE Menu SET Menu_naam = ? , Menu_prijs = ?, Menu_categorie = ? WHERE Menu_id = "'.$id.'"');
         $stmt->bind_param("sss", $_POST['naam'], $_POST['prijs'], $_POST['categorie']);
         $stmt->execute();
         $conn->close();

@@ -9,7 +9,7 @@
     }
 ?>
 <div id="content_beheer">
-<form action="beheer_snackhoek_add.php" method="POST">
+<form method="POST">
     <input type="text" name="naam" placeholder="naam" required>
     <input type="number" name="prijs" placeholder="prijs" step="0.01" min="0,05" max="20"required>
     <input type="radio" name="categorie" value="snacks"required>
