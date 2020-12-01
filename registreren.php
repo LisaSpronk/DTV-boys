@@ -7,12 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 function signup($voornaam, $tussenvoegsel, $achternaam, $wachtwoord, $straat, $huisnr, $woonplaats, $telefoonnr, $email, $geslacht, $geboortedatum){
     //Maak verbinding met database
-    $host = '185.87.187.247';
-    $dbuser = 'lspronk_dtv';
-    $dbpass = 'FransjeB12';
-    $dbname = 'lspronk_DTV';
-    $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
-    if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
+    include("php/database.php");
 
     $sql = "SELECT * FROM Leden WHERE Lid_email='$email'";
     $result = $conn->query($sql);

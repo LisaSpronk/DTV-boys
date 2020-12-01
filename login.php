@@ -14,7 +14,6 @@ function login($email, $wachtwoord){
     $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
 
-
     $stmt = $conn->prepare('SELECT * FROM Leden WHERE Lid_email= ? AND Lid_wachtwoord = ?;');
     $stmt->bind_param("ss", $email, $wachtwoord);   
     $stmt->execute();
