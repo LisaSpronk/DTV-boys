@@ -17,7 +17,7 @@ $result=$stmt->get_result();
 </style>
 <section>
 
-<a href="BeheerLedenAdd.php"> toevoegen </a>
+
 
 <table class="overzicht_tabel">
 <tr>
@@ -33,6 +33,7 @@ $result=$stmt->get_result();
     <th>Geslacht</th>
     <th>Geboortedatum</th>
     <th>Lid sinds</th>
+    <th><a href="BeheerLedenAdd.php"> toevoegen </a></th>
 </tr>
 
 <?php while($row=$result->fetch_assoc()): ?>
@@ -59,3 +60,4 @@ $result=$stmt->get_result();
 </table>
 
 </section>
+<?phpinclude('../beheer_footer');?>

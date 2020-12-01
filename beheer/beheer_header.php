@@ -4,9 +4,23 @@
 //     echo "<script>alert('U bent niet gemachtiged om deze pagina te bezoeken!');</script>";
 // }
 /*Omdat het beheer nog niet op de server staat en de verschillende linkjes niet overeen komen om goed te navigeren tussen de pagina's heeft het op het moment niet veel zin om het uit te proberen.(Teun)*/
-$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$url1="";
+$url2="";
+$url3="";
+$url4="";
 if (strpos($url,'Snackhoek') !== false) {
     $snackhoek="inactiveLink";
+    $url1="../";
+    $url2="../";
+    $url3="../";
+}
+if (strpos($url,'Leden') !== false) {
+    $leden="inactiveLink";
+    $url2="../";
+    $url3="../";
+    $url4="../";
+    
 }
 if (strpos($url,'index') !== false) {
     $home="inactiveLink";
@@ -29,10 +43,10 @@ if (strpos($url,'index') !== false) {
             </div>
             <nav>
                 <div class="item"><a class="<?php echo$home; ?>" href="../index.php">Home</a></div>
-                <div class="item"><a href="#">Leden</a></div>
+                <div class="item"><a class="<?php echo$Leden?>" href="<?php echo$url1?>Leden/beheerLeden.php">Leden</a></div>
                 <div class="item"><a href="#">Reserveringen</a></div>
                 <div class="item"><a href="#">Toernooien</a></div>
-                <div class="item"><a class="<?php echo$snackhoek; ?>" href="Snackhoek/overzicht.php">Snackhoek</a></div>
+                <div class="item"><a class="<?php echo$snackhoek?>" href="<?php echo$url4?>Snackhoek/overzicht.php">Snackhoek</a></div>
             </nav>
             <div class="sides"></div>
         </header>

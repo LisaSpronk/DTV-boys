@@ -1,5 +1,6 @@
 <?php
-include("database.php");
+include("../database.php");
+include("../beheer_header.php");
 
 $id=$_GET['id'];
 
@@ -50,3 +51,4 @@ header("Location: beheerLeden.php");
     <input type="submit" name="save" value="wijzigen">
     </form>
 </section>
+<?php include("../beheer_footer.php");?>
