@@ -4,7 +4,7 @@
   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     
 
-    $sql = "SELECT * FROM Leden INNER JOIN Toernooien ON Lid_toernooi = toernooi_ID";
+    $sql = "SELECT * FROM Toernooien";
     $result = $conn->query($sql); 
 
     if ($result->num_rows > 0) {
@@ -34,16 +34,9 @@
     
     <div>
      
-      <?php 
-       
-      ?>                     
-     
+
 
     </div>
-
-
-<?php
-
-  include("php/footer.php");
-
-?>
+    <?php include('php/footer.php'); ?>
+  </body>
+</html>
