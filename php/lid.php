@@ -78,7 +78,7 @@
             return $this->Lid_woonplaats;
         }
 
-        function setTelefoon($Lid_telefoonnr) {
+        function setTelefoonnr($Lid_telefoonnr) {
             $this->Lid_telefoonnr = $Lid_telefoonnr;
         }
     
