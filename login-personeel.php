@@ -29,11 +29,12 @@ function login($email, $wachtwoord){
     if ($result == null) {
         echo "<script>alert('Incorrecte gegevens!');</script>";
 
-        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
+        echo "<script>window.location.href = 'http://localhost/DTV/DTV-boys/' </script>";
     } else {
         echo "<script>alert('Succes!');</script>";
-
-        //echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
+        session_start();
+        $_SESSION['beheer']=1;
+        echo "<script>window.location.href = 'http://localhost/DTV/DTV-boys/beheer/index.php' </script>";
         
     }
 }

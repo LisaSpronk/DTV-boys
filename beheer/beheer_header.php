@@ -1,8 +1,13 @@
 <?php
-// if($_SESSION['beheer']!== True){
-//     echo "<script>window.location.replace = 'http://lspronk.gc-webhosting.nl/DTV/inloggen.php' </script>";
-//     echo "<script>alert('U bent niet gemachtiged om deze pagina te bezoeken!');</script>";
-// }
+session_start();
+$beheer=0;
+if(isset($_SESSION['beheer'])){
+    $beheer=$_SESSION['beheer'];
+}
+ if($beheer!==1){
+    session_destroy();
+    echo "<script>window.location.replace('http://localhost/DTV/DTV-boys/'); </script>";
+}
 /*Omdat het beheer nog niet op de server staat en de verschillende linkjes niet overeen komen om goed te navigeren tussen de pagina's heeft het op het moment niet veel zin om het uit te proberen.(Teun)*/
 $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $url1="";
@@ -32,9 +37,7 @@ if (strpos($url,'index') !== false) {
     $home="inactiveLink";
 
 } 
-if(isset($_POST['uitloggen'])){
-    /* terug naar homepage en destroy de session van beheer.*/
-}
+
 ?>
 <html lang="en">
 <head>
@@ -59,7 +62,7 @@ if(isset($_POST['uitloggen'])){
                 <div class="item"><a class="<?php echo$snackhoek?>" href="<?php echo$url4?>Snackhoek/overzicht.php">Snackhoek</a></div>
             </nav>
             <div class="sides">
-            <input type="submit" name="uitloggen" value="Uitloggen">
+            <a href='<?php echo$url2?>../php/logout.php'>Uitloggen</a>
             </div>
         </header>
         <div id="content_beheer">
