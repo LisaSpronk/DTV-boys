@@ -22,9 +22,19 @@ if (strpos($url,'Leden') !== false) {
     $url4="../";
     
 }
+if (strpos($url,'Toernooien') !== false) {
+    $Toernooien="inactiveLink";
+    $url1="../";
+    $url2="../";
+    $url4="../";
+} 
 if (strpos($url,'index') !== false) {
     $home="inactiveLink";
+
 } 
+if(isset($_POST['uitloggen'])){
+    /* terug naar homepage en destroy de session van beheer.*/
+}
 ?>
 <html lang="en">
 <head>
@@ -45,9 +55,11 @@ if (strpos($url,'index') !== false) {
                 <div class="item"><a class="<?php echo$home; ?>" href="../index.php">Home</a></div>
                 <div class="item"><a class="<?php echo$Leden?>" href="<?php echo$url1?>Leden/beheerLeden.php">Leden</a></div>
                 <div class="item"><a href="#">Reserveringen</a></div>
-                <div class="item"><a href="#">Toernooien</a></div>
+                <div class="item"><a class="<?php echo$Toernooien?>"  href="<?php echo$url3?>Toernooien/beheerToernooien.php">Toernooien</a></div>
                 <div class="item"><a class="<?php echo$snackhoek?>" href="<?php echo$url4?>Snackhoek/overzicht.php">Snackhoek</a></div>
             </nav>
-            <div class="sides"></div>
+            <div class="sides">
+            <input type="submit" name="uitloggen" value="Uitloggen">
+            </div>
         </header>
         <div id="content_beheer">

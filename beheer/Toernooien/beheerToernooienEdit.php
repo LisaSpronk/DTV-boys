@@ -1,5 +1,6 @@
 <?php
 include("../database.php");
+include("../beheer_header.php");
 
 $id=$_GET['id'];
 
@@ -52,3 +53,4 @@ header("Location: beheerToernooien.php");
     
     </form>
 </section>
+<?php include("../beheer_footer.php"); ?>

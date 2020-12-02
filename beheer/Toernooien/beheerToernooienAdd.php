@@ -1,5 +1,6 @@
 <?php
 include("../database.php");
+include("../beheer_header.php");
 
 if(isset($_POST['submit'])){
 
@@ -45,3 +46,4 @@ header("Location: beheerToernooien.php");
     
     </form>
 </section>
+<?php include("../beheer_footer.php");?>
