@@ -1,18 +1,17 @@
 <?php
-include("database.php");
+include("../database.php");
 
 $toernooienQuery = "SELECT * FROM Toernooien";
 $stmt = $conn->prepare($toernooienQuery);
 $stmt->execute();
-$result=$stmt->get_result()
+$result=$stmt->get_result();
 
-// include("beheerHeader.php");
-// include("beheerNav.php");
+include("../beheer_header.php");
 ?>
 
 <section>
 
-<a href="beheerToernooienAdd.php"> toevoegen </a>
+
 
 <table class="overzicht_tabel">
 <tr>
@@ -22,6 +21,7 @@ $result=$stmt->get_result()
     <th>Spelers limiet</th>
     <th>Banen</th>
     <th>Naam</th>
+    <td><a href="beheerToernooienAdd.php"> toevoegen </a></td>
 </tr>
 
 <?php 
@@ -43,3 +43,4 @@ $result=$stmt->get_result()
 
 </table>
 </section>
+<?php include("../beheer_footer.php"); ?>

@@ -33,7 +33,7 @@ $result=$stmt->get_result();
     <th>Geslacht</th>
     <th>Geboortedatum</th>
     <th>Lid sinds</th>
-    <th><a href="BeheerLedenAdd.php"> toevoegen </a></th>
+    <td><a href="BeheerLedenAdd.php"> toevoegen </a></td>
 </tr>
 
 <?php while($row=$result->fetch_assoc()): ?>

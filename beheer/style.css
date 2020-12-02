@@ -41,6 +41,7 @@ nav{
     text-decoration: none;
 }
 .item:hover{
+    color: white;
     border: 2px solid black;
     background-color: #6c9c69;
 }
@@ -68,9 +69,41 @@ nav{
   .overzicht_tabel th {
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: #4CAF50;
+    background-color: #7da87b;
     color: white;
   }
   .overzicht_tabel td{
       text-align: left;
   }
+  #dashbord{
+      flex: 60%;
+      padding: 5%;
+  }
+  .title{
+      color: black;
+  }
+  .side{
+      background-color: #e9e9e9;
+      height: 100vh;
+      
+  }
+  #content_beheer{
+      width: 100%;
+  }
+  #content_beheer a{
+      text-decoration: none;
+      color: black;
+  }
+
+  #content_beheer a:hover{
+    text-decoration: underlinde;
+    color: #7da87b;
+}
+table{
+    margin: 0;
+}
+.dasbordImage{
+    height: 40%;
+}
+
+  

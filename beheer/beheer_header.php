@@ -50,3 +50,4 @@ if (strpos($url,'index') !== false) {
             </nav>
             <div class="sides"></div>
         </header>
+        <div id="content_beheer">

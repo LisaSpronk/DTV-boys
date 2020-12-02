@@ -9,8 +9,7 @@ $result=$conn->query($getLidQuery);
 $row=$result->fetch_assoc();
 
 if(isset($_POST['save'])){
-$ledenEditQuery = "UPDATE Leden SET Lid_voornaam = ?,  Lid_tussenvoegsel = ? , Lid_achternaam = ?, Lid_straat = ?, Lid_huisnr = ?, Lid_woonplaats = ?, Lid_telefoonnr = ?, Lid_email = ?, Lid_geslacht = ?, Lid_geboortedatum = ?, Lid_sinds = ?
-                    WHERE Lid_nr = '{$id}'";
+$ledenEditQuery = "UPDATE Leden SET Lid_voornaam = ?,  Lid_tussenvoegsel = ? , Lid_achternaam = ?, Lid_straat = ?, Lid_huisnr = ?, Lid_woonplaats = ?, Lid_telefoonnr = ?, Lid_email = ?, Lid_geslacht = ?, Lid_geboortedatum = ?, Lid_sinds = ? WHERE Lid_nr = {$id}";
 
 
 $stmt = $conn->prepare($ledenEditQuery);
@@ -25,8 +24,6 @@ header("Location: beheerLeden.php");
 
 
 }
-// include("beheerHeader.php");
-// include("beheerNav.php");
 ?>
 
 <section>
