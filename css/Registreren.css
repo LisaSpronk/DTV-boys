@@ -59,17 +59,18 @@
   margin-right: 15px;
 }
 
-.btn-registreren {
+.btn {
   padding: 10px 20px;
   background-color: #7da87b;
   color: white;
-  margin: 20px 0 0 10px;
+  margin: 20px 0 0 0;
   border: none;
   cursor: pointer;
 }
 
-.btn-registreren:hover, .btn-registreren:focus {
-  outline: none;
-  background-color: rgba(125, 168, 123, 0.8);
+.btn:hover, .btn:focus {
+  outline: none !important;
+  background-color: rgba(125, 168, 123, 0.8) !important;
+  border-bottom: none !important;
 }
 
