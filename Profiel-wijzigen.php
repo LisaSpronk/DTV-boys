@@ -80,7 +80,7 @@ if(isset($_POST['profiel-wijzigen'])){
             <label for="geboortedatum" class="u-form-control-hidden u-label"></label>
             <input type="date" placeholder="Geboortedatum" value="<?php echo $_SESSION['gebruiker']->getGeboortedatum(); ?>" id="geboortedatum" name="geboortedatum" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
 
-          <input type="submit" class="btn" value="registreren" name="profiel-wijzigen">
+          <input type="submit" class="btn" value="gegevens wijzigen" name="profiel-wijzigen">
       </form>
     </section>
 
