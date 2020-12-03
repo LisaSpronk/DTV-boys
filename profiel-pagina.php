@@ -32,7 +32,7 @@ include("php/header.php");
         </div>
 
         <div class="gegevens-wijzigen">
-            <a href="profiel-wijzigen.php" class="wijzigen"> <i class="fas fa-user-edit"></i> Gegevens wijzigen </a>
+            <a href="Profiel-wijzigen.php" class="wijzigen"> <i class="fas fa-user-edit"></i> Gegevens wijzigen </a>
             <a href="#" class="verwijder-account"> Verwijder account </a>
         </div>
     </section>

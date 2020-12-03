@@ -26,7 +26,7 @@
         </div>
       </div>
       <p class="p-registreren">Nog geen account?</p>
-      <a href="registreren-page.php" class="a-registreren">Registreren <i class="fas fa-arrow-right"></i></a>
+      <a href="Registreren-page.php" class="a-registreren">Registreren <i class="fas fa-arrow-right"></i></a>
     </div>
 
 <?php

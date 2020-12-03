@@ -13,12 +13,13 @@ function signup($voornaam, $tussenvoegsel, $achternaam, $wachtwoord, $straat, $h
     $result = $conn->query($sql);
     if($result->num_rows >= 1){
         echo "<script>alert('Dit e-mailadres word al gebruikt!');</script>";
-        //echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV/registreren.php' </script>";
+        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/Registreren-page.php' </script>";
     } else{
         $stmt = $conn->prepare('INSERT INTO Leden (Lid_voornaam, Lid_tussenvoegsel, Lid_achternaam, Lid_wachtwoord, Lid_straat, Lid_huisnr, Lid_woonplaats, Lid_telefoonnr, Lid_email, Lid_geslacht, Lid_geboortedatum) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
         $stmt->bind_param("sssssssssss", $voornaam, $tussenvoegsel, $achternaam, $wachtwoord, $straat, $huisnr, $woonplaats, $telefoonnr, $email, $geslacht, $geboortedatum);
         $stmt->execute();
         echo "<script>alert('Je bent geregistreerd!');</script>";
+        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/' </script>";
     }
 
     $conn->close();

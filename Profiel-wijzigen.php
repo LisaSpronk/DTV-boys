@@ -34,7 +34,7 @@ if(isset($_POST['profiel-wijzigen'])){
     $_SESSION['gebruiker']->setLidsinds($row['Lid_sinds']);
 
     echo '<script>alert("Gegevens succesvol bijgewerkt!");</script>';
-    echo "<script>window.location.href = 'http://localhost/Examen/DTV-boys/profiel-pagina.php' </script>";
+    echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/profiel-pagina.php' </script>";
 }
 ?>
 
@@ -48,7 +48,7 @@ if(isset($_POST['profiel-wijzigen'])){
     </nav>
 
     <section class="profiel-gegevens profiel-active" id="#profiel-gegevens">
-    <form action="profiel-wijzigen.php" method="POST" class="form-registreren">
+    <form action="Profiel-wijzigen.php" method="POST" class="form-registreren">
         <div class="form-gegevens form-gegevens-naam">
             <label for="voornaam" class="u-form-control-hidden u-label">Voornaam</label>
             <input type="text" placeholder="Voornaam" value="<?php echo $_SESSION['gebruiker']->getVoornaam(); ?>" id="voornaam" name="voornaam" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white form-voornaam" required="">
