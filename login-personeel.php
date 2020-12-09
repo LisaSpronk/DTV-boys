@@ -26,17 +26,17 @@ function login($email, $wachtwoord){
     $conn->close();
 
     //Onderneem actie op basis van resultaat
-    if ($result == null) {
-        echo "<script>alert('Incorrecte gegevens!');</script>";
+    // if ($result == null) {
+    //     echo "<script>alert('Incorrecte gegevens!');</script>";
 
-        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/Inloggen.php' </script>";
-    } else {
-        echo "<script>alert('Succes!');</script>";
-        session_start();
-        $_SESSION['beheer']=1;
-        echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/beheer/index.php' </script>";
+    //     echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/Inloggen.php' </script>";
+    // } else {
+    //     echo "<script>alert('Succes!');</script>";
+    //     session_start();
+    //     $_SESSION['beheer']=1;
+    //     echo "<script>window.location.href = 'http://lspronk.gc-webhosting.nl/DTV-boys/beheer/index.php' </script>";
         
-    }
+    // }
 }
 
 ?>

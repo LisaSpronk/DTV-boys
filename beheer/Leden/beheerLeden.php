@@ -60,4 +60,4 @@ $result=$stmt->get_result();
 </table>
 
 </section>
-<?phpinclude('../beheer_footer');?>
+<?php include('../beheer_footer');?>
