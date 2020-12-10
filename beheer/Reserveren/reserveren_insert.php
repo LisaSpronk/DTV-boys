@@ -14,7 +14,7 @@ include('database.php');
             // $stmt->execute();
             echo $sql;
             if ($conn->query($sql) === TRUE) {
-                echo "<script>window.location.href = 'http://localhost/dtv-boys/beheer/Reserveren/reserveren.php'; </script>";
+                echo "<script>window.location.href = 'http://localhost/dtv/dtv-boys/beheer/Reserveren/reserveren.php'; </script>";
                 
             } else {
                 echo "Error" . $conn->error;

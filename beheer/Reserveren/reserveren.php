@@ -10,11 +10,13 @@ include('database.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.7/semantic.min.css">
     <link rel="stylesheet" href="reserveren.css">
-    <title>Document</title>
+    <title>Overview reservation</title>
 </head>
 <body>
-    
-
+<div class="ui segment inverted" style="background-color:black;">
+<h1>Reserveringen overzicht</h1>
+<a href="reserveren.php"><button class="ui purple button">Overzicht</button></a>
+<a href="reserveren_add.php"><button class="ui green button">Toevoegen</button></a>
 <table class="ui celled table" style="border-color:white;">
     <thead>
         <tr>
@@ -41,9 +43,10 @@ include('database.php');
             <td><a href="reserveren_delete.php?id=<?php echo$row['Reservering_nr']?>"><button class="ui red button">Delete</button></a></td>
     </tr>
     </tbody>
+    </div>
    <?php }; ?>
     
 </table>
-<a href="reserveren_add.php"><button class="ui green button">New</button></a>
+
 </body>
 </html>
