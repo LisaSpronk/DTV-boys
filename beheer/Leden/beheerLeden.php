@@ -1,12 +1,20 @@
 <?php
+<<<<<<< Updated upstream:beheer/Leden/beheerLeden.php
 include("../database.php");
 include("../beheer_header.php");
 
+=======
+//Verbind met de database
+include("database.php");
+>>>>>>> Stashed changes:php/beheerLeden.php
 
 
 $ledenQuery = "SELECT * FROM Leden";
+//controleer of de query klopt en stuurt een verificatie naar de server
 $stmt = $conn->prepare($ledenQuery);
+//voer bovenstaande query uit
 $stmt->execute();
+//haal het resultaat op van alle gegenereerde gegevens van de query
 $result=$stmt->get_result();
 
 //include("beheerHeader.php");
@@ -35,7 +43,7 @@ $result=$stmt->get_result();
     <th>Lid sinds</th>
     <td><a href="BeheerLedenAdd.php"> toevoegen </a></td>
 </tr>
-
+<!-- haalt rows op uit de database en maakt arrays tot er geen rows met resultaten meer zijn-->
 <?php while($row=$result->fetch_assoc()): ?>
     <tr>
         <td><?php echo $row['Lid_nr'];?></td>

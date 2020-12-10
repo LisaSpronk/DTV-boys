@@ -1,19 +1,33 @@
 <?php
+<<<<<<< Updated upstream:beheer/Leden/beheerLedenAdd.php
 include("../database.php");
 include("../beheer_header.php");
-if(isset($_POST['submit'])){
+=======
+//Verbind met de database
+include("database.php");
 
+//controleer of submit is geset
+>>>>>>> Stashed changes:php/beheerLedenAdd.php
+if(isset($_POST['submit'])){
+//zet wachtwoord om naar hash
 $pwd=hash('sha256', $_POST['Lid_wachtwoord']); 
 $ledenAddQuery = 'INSERT INTO Leden (Lid_voornaam, Lid_tussenvoegsel, Lid_achternaam, Lid_wachtwoord, Lid_straat, Lid_huisnr, Lid_woonplaats, Lid_telefoonnr, Lid_email, Lid_geslacht, Lid_geboortedatum, Lid_sinds) 
                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);' ;
 
+//controleer of de query klopt en stuurt een verificatie naar de server
 $stmt = $conn->prepare($ledenAddQuery);
+
+//koppelt bovengenoemde vraagtekens aan variabelen
 $stmt->bind_param("ssssssssssss", $_POST['Lid_voornaam'], $_POST['Lid_tussenvoegsel'], $_POST['Lid_achternaam'], $pwd, $_POST['Lid_straat'], $_POST['Lid_huisnr'], $_POST['Lid_woonplaats'], $_POST['Lid_telefoonnr'], $_POST['Lid_email'], $_POST['Lid_geslacht'], $_POST['Lid_geboortedatum'], $_POST['Lid_sinds']);
+//voer bovenstaande query uit
 $stmt->execute();
+//haal het resultaat op van alle gegenereerde gegevens van de query
 $result=$stmt->get_result();
+//Sluit huidige statement af
 $stmt->close();
 
 echo '<script>alert("Lid succesvol aangemaakt")</script>';
+//redirect naar het ledenoverzicht
 header("Location: beheerLeden.php");
 
 
