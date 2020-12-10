@@ -1,13 +1,6 @@
 <?php
-<<<<<<< Updated upstream:beheer/Leden/beheerLedenAdd.php
 include("../database.php");
 include("../beheer_header.php");
-=======
-//Verbind met de database
-include("database.php");
-
-//controleer of submit is geset
->>>>>>> Stashed changes:php/beheerLedenAdd.php
 if(isset($_POST['submit'])){
 //zet wachtwoord om naar hash
 $pwd=hash('sha256', $_POST['Lid_wachtwoord']); 

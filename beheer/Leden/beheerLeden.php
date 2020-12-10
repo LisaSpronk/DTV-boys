@@ -1,12 +1,7 @@
 <?php
-<<<<<<< Updated upstream:beheer/Leden/beheerLeden.php
 include("../database.php");
 include("../beheer_header.php");
 
-=======
-//Verbind met de database
-include("database.php");
->>>>>>> Stashed changes:php/beheerLeden.php
 
 
 $ledenQuery = "SELECT * FROM Leden";
